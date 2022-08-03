@@ -1,7 +1,5 @@
 import javascript
 
-from DataFlow::SourceNode sn
-where sn = jquery().getAPropertyRead("fn").getAPropertySource()
-and
-sn  instanceof DataFlow::PropRead
-select sn
+from DataFlow::Node n
+where n = jquery().getAPropertyRead("fn").getAPropertySource()
+select n
